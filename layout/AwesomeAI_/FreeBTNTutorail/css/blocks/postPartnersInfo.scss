@@ -1,0 +1,40 @@
+.moreInformation {
+  @extend .partners;
+
+  &__box {
+    height: 70vh;
+
+    @include phone {
+      height: 90vh;
+    }
+  }
+
+  &__link {
+    @include phone {
+      margin-bottom: 15px;
+
+      &:last-child {
+        margin: none;
+      }
+    }
+  }
+
+  &__video {
+    flex: 1;
+    padding: 10px;
+    border-radius: 10px;
+    transform: scale(0.95);
+    transition: .5s;
+    opacity: .5;
+
+    &:hover {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+}
+
+.actVideo {
+  transform: scale(1);
+  opacity: 1;
+}

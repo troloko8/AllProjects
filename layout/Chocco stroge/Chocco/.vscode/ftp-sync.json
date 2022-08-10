@@ -1,0 +1,27 @@
+{
+    "remotePath": "./troloko/public_html/",
+    "host": "vh116.timeweb.ru",
+    "username": "cn28188",
+    "password": "lrr3tn3kzNQx",
+    "port": 21,
+    "secure": false,
+    "protocol": "ftp",
+    "uploadOnSave": false,
+    "passive": false,
+    "debug": false,
+    "privateKeyPath": null,
+    "passphrase": null,
+    "agent": null,
+    "allow": [],
+    "ignore": [
+        "\\.vscode",
+        "\\.git",
+        "\\.DS_Store"
+    ],
+    "generatedFiles": {
+        "extensionsToInclude": [
+            ""
+        ],
+        "path": ""
+    }
+}

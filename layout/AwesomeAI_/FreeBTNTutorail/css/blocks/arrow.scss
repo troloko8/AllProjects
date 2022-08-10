@@ -1,0 +1,84 @@
+.test {
+  position: relative;
+  width: 100vw;
+  height: 200px;
+  background: yellow;
+}
+
+.arrow {
+  min-width: 15px;
+  height: 30px;
+  overflow: hidden;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  z-index: 3;
+
+  &-left {
+    left: 1%;
+    transform: rotate(180deg) translate(0, 55%);
+    animation: arrowMoveLeft 5s infinite;
+  }
+
+  &-right {
+    right: 1%;
+    animation: arrowMoveRight 5s infinite;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    transform: rotate(45deg);
+    border: 2px solid rgb(255, 255, 255);
+    top: -11px;
+    left: -50px;
+    border-radius: 6px;
+  }
+}
+
+@keyframes arrowMoveRight {
+  from {
+    transform: translateX(0%);
+  }
+
+  10% {
+    transform: translateX(50%);
+  }
+
+  20% {
+    transform: translateX(-50%);
+  }
+
+  30% {
+    transform: translateX(0%);
+  }
+
+  to {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes arrowMoveLeft {
+  from {
+    transform: translateX(0%) rotate(180deg);
+  }
+
+  10% {
+    transform: translateX(-50%) rotate(180deg);
+  }
+
+  20% {
+    transform: translateX(50%) rotate(180deg);
+  }
+
+  30% {
+    transform: translateX(0%) rotate(180deg);
+  }
+
+  to {
+    transform: translateX(0%) rotate(180deg);
+  }
+}

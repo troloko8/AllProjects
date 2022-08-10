@@ -1,0 +1,15 @@
+.main-info {
+  text-align: center;
+  height: 80vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  position: relative;
+  margin-bottom: 20px;
+
+  @include phone {
+    height: 100vh;
+  }
+}

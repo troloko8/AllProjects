@@ -1,0 +1,45 @@
+.header {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+
+  @include tablets600 {
+    width: 90%;
+  }
+
+  &__title {
+    @include text-info(CormorantInfant-Bold, bold, normal, 36px, 1, $black);
+    margin-bottom: 10px;
+
+    @include tablets {
+      font-size: 44px;
+    }
+
+    @include phone {
+      font-size: 40px;
+    }
+
+  }
+
+  &__text {
+    @include text-info(CormorantInfant-LightItalic, 300, italic, 16px, 1.5, #595959);
+    margin-bottom: 54px;
+
+    @include tablets {
+      font-size: 26px;
+      margin-bottom: 30px;
+    }
+
+    @include tablets600 {
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+
+    @include phone {
+      font-size: 32px;
+      margin-bottom: 30px;
+    }
+  }
+}

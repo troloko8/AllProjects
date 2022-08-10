@@ -1,0 +1,38 @@
+ $font-family: (BarlowCondensed-Regular:(300, normal),
+   BarlowCondensed-Black:(900, normal),
+   BarlowCondensed-BlackItalic:(900, italic),
+   BarlowCondensed-Bold:(600, normal),
+   BarlowCondensed-BoldItalic:(600, italic),
+   BarlowCondensed-ExtraBold:(900, normal),
+   BarlowCondensed-ExtraBoldItalic:(900, italic),
+   BarlowCondensed-ExtraLight:(200, normal),
+   BarlowCondensed-ExtraLightItalic:(200, italic),
+   BarlowCondensed-Italic:(400, italic),
+   BarlowCondensed-Light:(300, normal),
+   BarlowCondensed-LightItalic:(300, italic),
+   BarlowCondensed-Medium:(500, normal),
+   BarlowCondensed-MediumItalic:(500, italic),
+   BarlowCondensed-SemiBold:(700, normal),
+   BarlowCondensed-SemiBoldItalic:(700, italic),
+   BarlowCondensed-Thin:(100, normal),
+   BarlowCondensed-ThinItalic:(100, italic),
+   Ibmplexsans:(normal, normal),
+   //  Gelasio-Regular:(300, normal),
+   //  Nanumgothic:(300, normal),
+ );
+
+
+ @each $font,
+ $font-info in $font-family {
+   $font-weight: nth($font-info, 1);
+   $font-style: nth($font-info, 2);
+
+   @font-face {
+     font-family: #{$font};
+     src: url('../fonts/#{$font}.woff') format('woff'),
+     url('../fonts/#{$font}.woff2') format('woff2');
+     font-weight: $font-weight;
+     font-style: $font-style;
+     font-display: fallback;
+   }
+ }

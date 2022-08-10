@@ -1,0 +1,84 @@
+.footer {
+  height: 360px;
+  background: #262626;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+
+  @include phone320 {
+    height: 430px;
+  }
+
+  &__box {
+    display: flex;
+    height: initial;
+
+    @include tablets {
+      align-items: flex-start;
+    }
+  }
+
+  &__container {
+    display: flex;
+    width: 455px;
+    flex-direction: column;
+
+    @include phone {
+      width: 50%;
+    }
+  }
+
+  &__title {
+    @include text-info(CormorantInfant-Bold, bold, normal, 36px, 1.2, $black);
+    color: #ffffff;
+    margin-bottom: 10px;
+
+    @include phone {
+      font-size: 34px;
+    }
+  }
+
+  &__text {
+    @include text-info(CormorantInfant-LightItalic, 300, italic, 16px, 1.5, #595959);
+    color: #ffffff;
+    width: 70%;
+
+    @include tablets {
+      width: 100%;
+      font-size: 28px;
+      line-height: 1.3;
+    }
+
+    @include tablets600 {
+      width: 100%;
+      font-size: 28px;
+      line-height: 1.3;
+    }
+    
+    @include phone {
+      width: 100%;
+      font-size: 30px;
+      line-height: 1.3;
+    }
+  } 
+
+  &__corporation {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    @include text-info(ptsans, normal, normal, 14px, 1, #999999);
+    border-top: 1px solid #999999;
+
+    @include tablets {
+      font-size: 24px;
+    }
+
+    @include tablets600 {
+      font-size: 28px;
+    }
+
+    @include phone {
+      font-size: 30px;
+    }
+  }
+}

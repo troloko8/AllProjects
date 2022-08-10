@@ -1,0 +1,102 @@
+.contact {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0 40px 0;
+
+  &__title {
+    color: white;
+    text-align: center;
+    margin-bottom: 30px;
+    @include text-info (BarlowCondensed-Bold, normal, 700, 28px, 1, rgb(255, 255, 255));
+
+    @include phone {
+      margin-bottom: 35px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-around;
+
+    @include phone {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &__item {
+    @include phone {
+      margin-bottom: 50px;
+    }
+  }
+
+  &__link {
+    min-width: 165px;
+    font-size: 20px;
+    @include text-info (BarlowCondensed-Regular, normal, 400, 28px, 1, rgb(0, 119, 255));
+    padding: 5px 30px;
+    text-transform: uppercase;
+    transition: .3s;
+    border: 3px solid #2ba4e0;
+    position: relative;
+
+    &-telegram {
+      color: #2ba4e0;
+      border-color: #2ba4e0;
+    }
+
+    &-facebook {
+      color: #3a5898;
+      border-color: #3a5898;
+    }
+
+    &-twitter {
+      color: #64a8f2;
+      border-color: #64a8f2;
+      padding: 5px 37px;
+    }
+
+    &-linkedin {
+      color: #1191d4;
+      border-color: #1191d4;
+      // padding: 5px 37px;
+    }
+
+    &::after {
+      content: '';
+      width: 8%;
+      height: 3px;
+      background: #070007;
+      position: absolute;
+      bottom: -3px;
+      right: 10%;
+      transition: .3s linear;
+      transform: skewX(50deg);
+    }
+
+    &::before {
+      @extend .contact__link::after;
+      top: -3px;
+      left: 10%;
+    }
+
+    &:hover::after {
+      right: 80%;
+    }
+
+    &:hover::before {
+      left: 80%;
+    }
+  }
+}
+
+.actContact {
+  &::after {
+    right: 80%;
+  }
+
+  &::before {
+    left: 80%;
+  }
+}

@@ -1,0 +1,19 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  min-width: 100%;
+  // height: 100%;
+  overflow: hidden;
+}
+
+
+.main {
+  width: 100%;
+  height: 80%;
+}
+
+body {
+  background-color: #070007;
+  z-index: -2;
+}

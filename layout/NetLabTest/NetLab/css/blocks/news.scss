@@ -1,0 +1,290 @@
+.news {
+  display: flex;
+
+  @include tablets {
+    flex-direction: column;
+  }
+
+  // @include tablets600 {
+  //   flex-direction: column;
+  // }
+
+  // @include phone {
+  //   flex-direction: column;
+  // }
+
+  &__box {
+     display: flex;
+     justify-content: space-between;
+     align-items: flex-start;
+     flex-direction: column;
+    flex: 1;
+    margin-left: 30px;
+
+    @include tablets {
+      align-items: center;
+      flex-direction: column;
+      margin: 0;
+      flex: none;
+    }
+
+    @include tablets600 {
+      align-items: center;
+      flex-direction: column;
+      margin: 0;
+    }
+    // @include phone {
+    //   align-items: center;
+    //   flex-direction: column;
+    //   margin: 0;
+    // }
+
+    &:first-child {
+      margin: 0;
+
+      @include phone {
+        margin:  0 0 20px 0;
+      }
+    }
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    background-color: #ffffff;
+    flex: 1;
+    margin-bottom: 20px;
+
+    &:first-child {
+      margin-bottom: 30px;
+    }
+
+    @include tablets600 {
+      flex: none;
+    }
+  }
+
+  &__picture {
+    max-height: 320px;
+    max-width: 100%;
+    margin-bottom: 20px;
+
+    @include tablets {
+      max-height: none;
+      // height: initial;
+    }
+
+    @include tablets600 {
+      // max-height: none;
+      height: initial;
+    }
+
+    @include phone {
+      // max-height: 640px;
+      height: initial;
+    }
+
+    &_right {
+      margin-bottom: 10px;
+
+      @include phone {
+        // height: 50%;
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  &__info {
+    margin-bottom: 16px;
+
+    @include phone {
+      margin-bottom: 26px;
+    }
+  }
+
+  &__data {
+    @include text-info(ptsans, normal, normal, 14px, 1.9, #a6a6a6);
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+
+    @include tablets {
+      font-size: 28px;
+    }
+
+    @include tablets600 {
+      font-size: 31px;
+      margin-bottom: 30px;
+    }
+
+    @include phone {
+      font-size: 31px;
+      margin-bottom: 30px;
+    }
+
+    &:before {
+      content: '';
+      background: url('../img/calendar.png');
+      width: 16px;
+      height: 16px;
+      margin-right: 10px;
+
+      @include tablets {
+        width: 28px;
+        height: 28px;
+        background-size: cover;
+      }
+
+      @include tablets600 {
+        width: 32px;
+        height: 32px;
+        background-size: cover;
+      }
+
+      @include phone {
+        width: 32px;
+        height: 32px;
+        background-size: cover;
+      }
+    }
+  }
+
+  &__title {
+    @include text-info(CormorantInfant-SemiBoldItalic, bold, normal, 30px, 1, $black);
+    margin-bottom: 10px;
+
+    @include tablets {
+      font-size: 44px;
+    }
+
+    @include tablets600 {
+      font-size: 50px;
+    }
+
+    @include phone {
+      font-size: 42px;
+      margin-bottom: 30px;
+    }
+
+    &_right {
+      font-size: 28px;
+
+      @include tablets {
+        font-size: 34px;
+      }
+
+      @include tablets600 {
+        font-size: 36px;
+      }
+
+      @include phone {
+        font-size: 42px;
+      }
+    }
+  }
+
+  &__text {
+    @include text-info(ptsans, normal, normal, 16px, 1.65, #737373);
+  
+    @include tablets {
+      font-size: 28px;
+      line-height: 1.5;
+    }
+
+    @include tablets600 {
+      font-size: 32px;
+      line-height: 1.5;
+    }
+
+    @include phone {
+      font-size: 32px;
+      line-height: 1.5;
+    }
+  }
+
+  &__other {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    justify-content: space-between;
+    height: 100%;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #f2f2f2;
+    background: #ffffff;
+    padding: 20px 25px;
+    flex: 0 0 50%;
+    // max-height: 355px;
+
+    @include tablets {
+      // max-height: 500px;
+      justify-content: space-between
+    }
+    
+    @include phone {
+      max-height: 660px;
+      justify-content: space-between
+    }
+  }
+
+  &__detail {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    @include text-info(ptsansbold, bold, normal, 12px, 24px, #48974c);
+    text-transform: uppercase;
+    
+    @include tablets {
+      font-size: 24px;
+      margin-top: 10px;
+    }
+
+    @include tablets600 {
+      font-size: 30px;
+      margin-top: 20px;
+    }
+
+    @include phone {
+      font-size: 32px;
+      margin-top: 20px;
+    }
+
+    &::before {
+      content: "";
+      background: url('../img/arrow.png') 60% center no-repeat,
+      #48974c;
+      width: 15px;
+      height: 15px;
+      margin-right: 10px;
+      border-radius: 50%;
+
+       @include tablets {
+        // background-size: 50%;
+        width: 27px;
+        height: 27px; 
+        background-position-x: 55%; 
+       }
+
+       @include tablets600 {
+        background-position-x: 58%;
+        width: 32px;
+        height: 32px; 
+       }
+
+       @include phone {
+        background-position-x: 58%;
+        width: 35px;
+        height: 35px; 
+       }
+    }
+  }
+}

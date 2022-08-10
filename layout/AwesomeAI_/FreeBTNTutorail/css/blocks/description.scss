@@ -1,0 +1,35 @@
+.description {
+  &__container {
+    display: flex;
+    flex: 1;
+    font-size: 14px;
+    flex-direction: column;
+    height: 100%;
+    padding: 30px 15px 30px 10px;
+    min-width: 33.3vw;
+
+    @include phone {
+
+      &:first-child {
+        display: none;
+      }
+    }
+  }
+
+  &__box {
+    height: 50%;
+    margin-bottom: 15px;
+    min-height: 50%;
+    padding: 0 10px;
+
+    @include phone {
+      min-height: 0;
+      height: initial;
+    }
+  }
+
+  &__title {
+    @include text-info (BarlowCondensed-Bold, normal, 700, 28px, 1, rgb(255, 255, 255));
+    margin-bottom: 20px;
+  }
+}
